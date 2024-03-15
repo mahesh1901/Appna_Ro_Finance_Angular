@@ -1,16 +1,16 @@
-// .footer{
-    //     position: absolute;
-    //     right: 0;
-    //     left: 0;
-    //     bottom: 0;   
-    //     z-index: -1;
-    //     height: 100%;
-    //     width: 3px; 
-    //     background-color: #3b3535;
-    //     text-align: center;
-    //     color: #ce9696;
-    //     font-weight: 200;
-    // }
+/* .footer{
+       position: absolute;
+      right: 0;
+         left: 0;
+         bottom: 0;   
+       z-index: -1;
+        height: 100%;
+        width: 3px; 
+        background-color: #3b3535;
+        text-align: center;
+        color: #ce9696;
+        font-weight: 200;
+    }
     mat-card {
         max-width: 400px;
         margin: 2em auto;
@@ -293,4 +293,33 @@
     }
     
     
-    
+     */
+
+     /* Footer */
+footer {
+    background-color: #3b3535; /* Changed background color */
+    color: #ce9696; /* Changed text color */
+    font-size: 12px; /* Reduced font size */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px; /* Reduced padding */
+    z-index: 999;
+  }
+  
+  footer p {
+    margin: 5px 0; /* Reduced paragraph margin */
+  }
+  
+  footer a {
+    color: #ce9696; /* Changed link color */
+    text-decoration: none;
+  }
+  
+  /* Footer Hover Effect */
+  footer a:hover {
+    color: #fff; /* Hover color */
+  }
+  
