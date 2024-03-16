@@ -55,6 +55,7 @@ export class SinInComponent {
     ) {
       alert('welcome RExecutive');
       localStorage.setItem('role', 'RExecutive');
+      // 'dashboardlayout/RExecutive'
       this.router.navigateByUrl('dashboardlayout/RExecutive');
     } else if (
       this.loginf.get('customerEmail').value === 'cm' &&
@@ -70,6 +71,7 @@ export class SinInComponent {
     alert('welcome Account Manager');
     localStorage.setItem('role', 'acManager');
     this.router.navigateByUrl('dashboardlayout/acManager');
+    
 } else {
       alert('invalid credetials ...!!!!');
     }

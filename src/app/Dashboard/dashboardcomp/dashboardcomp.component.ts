@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Menu } from '../../Model/menu';
 import { BreakpointObserver } from '@angular/cdk/layout';
@@ -14,7 +14,8 @@ export class DashboardcompComponent {
   @ViewChild(MatSidenav)  
   public sidenav: MatSidenav;
 
-  constructor(private router: Router, private observer: BreakpointObserver) {}
+  constructor(private router: Router, private observer: BreakpointObserver,private cdr: ChangeDetectorRef) {}
+  someProperty: boolean = true;
 
   public userRole: any;  
 
@@ -36,6 +37,10 @@ export class DashboardcompComponent {
         this.sidenav.mode = 'side';
         this.sidenav.open();
       }
+      setTimeout(() => {
+        this.someProperty = false;
+        this.cdr.detectChanges(); // Trigger change detection
+      });
     });
   }
 

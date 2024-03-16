@@ -16,13 +16,16 @@ const routes: Routes = [
      {
        path:'',component:HomeComComponent     
      },      
-       {path:'emiCalculator',component:EmiCalculatorComponent
+
+      {
+        path:'emiCalculator',component:EmiCalculatorComponent
      },
      {path:'aboutUs',component:AboutUsComponent
      },
        {path:'loanEnquiry',component:LoanEnquiryComponent
      },
-       {path:'signIN',component:SinInComponent
+      {
+        path:'signIN',component:SinInComponent
      }, 
      {path:'faq', component:FaqComponent
      },
@@ -31,7 +34,7 @@ const routes: Routes = [
      },
      {
        path:'home',component:HomeComComponent     
-     },  
+     } 
    ]
    }
 ];

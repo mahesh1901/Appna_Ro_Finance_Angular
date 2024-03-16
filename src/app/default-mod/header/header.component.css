@@ -23,7 +23,7 @@
 
 .wrapper .top_nav{
   /* background-image: url(https://www.onlinesbi.sbi/sbijava/images/banner33.jpg); */
-  background-image:  url(/assets/pexels-gustavo-fring-4895421.jpg) ;
+  background-image:  url(/assets/unnamed.png) ;
   margin-top: 0px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -113,6 +113,6 @@ p{
 }
 
  
-/* .logo{
+.logo{
  background-image: url(/src/assets/onlinelogomaker-011623-1727-9181-2000-transparent.png);
-} */
+}
