@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SanctionLetter } from '../Model/sanction-letter';
 import { EnquiryDetails } from '../Model/enquiry-details';
-import { Cibil } from '../Model/cibil';
+
 import { GuarantorDetails } from '../Model/guarantor-details';
 import { Documents } from '../Model/documents';
 import { Ledger } from '../Model/ledger';
@@ -30,7 +30,9 @@ export class CommonServiceService {
    pancardNumber: '',
    monthlyIncome:0,
    enquiryStatus: '',
-   cibildata: new Cibil
+   setCurrentDateAndTime:'',
+   cibilScore:' '
+   //cibildata: new Cibil
    
  }
 
@@ -70,30 +72,32 @@ public customer:Coustomer={
   ledger: new Ledger,
   sanctionLetter: new SanctionLetter,
   // already in data base 
-  customerCibilScore: new Cibil,
+  //customerCibilScore: new Cibil,
   customerId: undefined
 }
 
 //------------------------------------------------------ enquiry component -----------------------------------------------------------
 // save customer Enquiry 
   customerEnquiry(enquiryDetails: EnquiryDetails) {
-    return this.http.post("http://localhost:9090/GCappps/enquiry",enquiryDetails)  // done here
+    return this.http.post("http://mahesh:8083/enq/enquiry",enquiryDetails)  // done here
   }
 
   // response are get in the form of the base responselist //it is for all data  get all enquiries from here 
   customerEnquiries(status:string){
-    return this.http.get("http://localhost:9090/GCappps/getallenquiries/"+status)
+    return this.http.get("http://mahesh:8083/enq/getallenquiries/"+status)
   }
 
 //--------------------------------------------------------- RE call -----------------------------------------------------------
-// RE check the cibil cibil generated and uodate in enquiry database  
+// RE check the cibil cibil generated and uodate in enquiry database    enquiryCibil
   cibilScoreCheck(enquiryDetails: EnquiryDetails){
-    return this.http.put("http://localhost:9090/GCappps/CIBILScore/check/"+enquiryDetails.pancardNumber,enquiryDetails)
+    return this.http.put("http://mahesh:8083/enq/CIBILScore/check/"+enquiryDetails.pancardNumber,enquiryDetails)
+    // return this.http.put("http://mahesh:8083/enquiryCibil/"+enquiryDetails.pancardNumber,enquiryDetails)
+
   }
 
   // Depend on cibil mail is send to Customer 
   sendMail(enquiryDetails: EnquiryDetails){
-    return this.http.post("http://localhost:9090/GCappps/cibilstatus",enquiryDetails)
+    return this.http.post("http://localhost:9090//cibilstatus",enquiryDetails)
   }
 
 
@@ -148,3 +152,4 @@ public customer:Coustomer={
         return this.http.get("http://localhost:9090/GCappps/generateledger/"+customerId);
         }
 }
+

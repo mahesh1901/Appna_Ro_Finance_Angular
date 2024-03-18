@@ -7,10 +7,16 @@
           <ng-template matStepLabel>Fill Basic Details</ng-template>
           
           
-          <mat-form-field appearance="outline">     
+          <!-- <mat-form-field appearance="outline">     
             <mat-label>Enquiry Id</mat-label>     
             <input matInput formControlName="enquiryId" required />
-          </mat-form-field> 
+          </mat-form-field>  -->
+
+          <!-- // Auto Generate  -->
+          <!-- <mat-form-field appearance="outline">     
+            <mat-label>Customer Id</mat-label>     
+            <input matInput formControlName="customerId" required />
+          </mat-form-field>  -->
        
           <mat-form-field appearance="outline">     
             <mat-label>First Name</mat-label>     
@@ -229,70 +235,8 @@
       </mat-step>
   
   
-      <!--form 4:  Delear info  -->
-      <mat-step [stepControl]="dealerDetailsform" label="Dealer Details">
-        <div formGroupName="dealerData">
-          <ng-template matStepLabel>Dealer Details</ng-template>
-  
-          
-          <mat-form-field appearance="outline">  
-            <mat-label>Name</mat-label>          
-            <input matInput formControlName="dealerName" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">   
-            <mat-label>Loction</mat-label>         
-            <input matInput formControlName="dealerLocation" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">  
-            <mat-label>Email Id</mat-label>         
-            <input matInput formControlName="dealerEmail" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">     
-            <mat-label>Account No:</mat-label>     
-            <input matInput formControlName="accountNumber" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">  
-            <mat-label>IFSC</mat-label>         
-            <input matInput formControlName="accountIFSCCode" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">         
-            <mat-label>Vehicle Company Name </mat-label> 
-            <input matInput formControlName="vehicleCompanyName" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">    
-            <mat-label>Vehicle Model</mat-label>        
-            <input matInput formControlName="vehicleModel" required />
-          </mat-form-field>
-  
-          
-          <mat-form-field appearance="outline">      
-            <mat-label>Vehicle Price</mat-label>     
-            <input matInput formControlName="vehiclePrice" required />
-          </mat-form-field>
-  
-          <div>
-            <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
-            <button mat-raised-button color="accent" matStepperNext type="button">Next</button>
-        </div>
-  
-        </div>
-        </mat-step>
-  
-  
-  
-          <!--form 5:  Delear info  -->
+      
+          <!--form 5:  Guarantor info  -->
   
           <mat-step [stepControl]="guarantorDetailsform" label="Guarantor Details">
             <div formGroupName="guarantorDetails">
@@ -342,7 +286,7 @@
   
           <div class="mb-4">
             <label for="exampleInputName">PanCard</label>
-            <input type="file" (change)="onselectfile1($event)"><img [src]="pancardurl" height="70">
+            <input type="file" (change)="onselectfile1($event)"><img [src]="panCardurl" height="70">
           </div>
   
           <div class="mb-4">

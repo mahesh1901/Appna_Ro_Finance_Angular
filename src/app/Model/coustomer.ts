@@ -1,4 +1,4 @@
-import { Cibil } from "./cibil";
+
 import { CoustomerAddress } from "./coustomer-address";
 import { CoustomerFinancialData } from "./coustomer-financial-data";
 import { Dealer } from "./dealer";
@@ -10,7 +10,7 @@ import { SanctionLetter } from "./sanction-letter";
 
 export class Coustomer 
 {
-    customerId:string;	
+customerId:string;	
 enquiryId:string;
 customerFirstName:string;
 customerMiddleName:string;
@@ -44,5 +44,5 @@ ledger:Ledger;
 sanctionLetter:SanctionLetter;	
 
 
-customerCibilScore:Cibil;	
+//customerCibilScore:Cibil;	
 }

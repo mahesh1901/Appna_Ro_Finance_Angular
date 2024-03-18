@@ -1,9 +1,9 @@
 export class Documents 
 {
     documentId: [];
-    pancard: any[];
-    adharcard: any[];
-    photo: any[];
-    signature: any[];
+    panCard: any[];
+    adharCard: any[];
+    passSizePhoto: any[];
+    signVerification: any[];
     incomeStatement: any[];
 }

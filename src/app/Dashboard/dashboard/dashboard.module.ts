@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav'; // Import MatSidenavModule
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     MatDividerModule,
     RouterModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule
   ],
   exports:[
     DashboardcompComponent

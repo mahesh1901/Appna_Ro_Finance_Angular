@@ -1,4 +1,4 @@
-import { Cibil } from "./cibil";
+
 
 export class EnquiryDetails 
 {
@@ -12,5 +12,7 @@ export class EnquiryDetails
     pancardNumber:string;
     monthlyIncome:number;
     enquiryStatus:string;
-    cibildata:Cibil;  
+    setCurrentDateAndTime:any;
+    cibilScore:string;
+    //cibildata:Cibil;  
 }

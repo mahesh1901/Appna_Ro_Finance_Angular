@@ -81,18 +81,7 @@ export class MultistepformComponent implements OnInit {
       employerName: this.fb.control('', Validators.required),
     }),
 
-    //form 4
-    dealerData: this.fb.group({
-      dealerId:'',
-      dealerName: this.fb.control('', Validators.required),
-      dealerLocation: this.fb.control('', Validators.required),
-      dealerEmail: this.fb.control('', Validators.required),
-      accountNumber: this.fb.control(0, Validators.required),
-      accountIFSCCode: this.fb.control('', Validators.required),
-      vehicleCompanyName: this.fb.control('', Validators.required),
-      vehicleModel: this.fb.control('', Validators.required),
-      vehiclePrice: this.fb.control(0, Validators.required),
-    }),
+    
 
     // form 5
     guarantorDetails: this.fb.group({
@@ -106,10 +95,10 @@ export class MultistepformComponent implements OnInit {
     // form 6
     customerDocuments: this.fb.group({
       documentId: 0,
-      pancard: this.fb.control('', Validators.required),
-      adharcard: this.fb.control('', Validators.required),
-      photo: this.fb.control('', Validators.required),
-      signature: this.fb.control('', Validators.required),
+      panCard: this.fb.control('', Validators.required),
+      adharCard: this.fb.control('', Validators.required),
+      passSizePhoto: this.fb.control('', Validators.required),
+      signVerification: this.fb.control('', Validators.required),
       incomeStatement: this.fb.control('', Validators.required),
     }),
   });
@@ -123,9 +112,7 @@ export class MultistepformComponent implements OnInit {
   get customerFinancialDataForm() {
     return this.CustomerRegister.get("customerFinancialData") as FormGroup;
   }
-  get dealerDetailsform() {
-    return this.CustomerRegister.get("dealerData") as FormGroup;
-  }
+  
   get guarantorDetailsform() {
     return this.CustomerRegister.get("guarantorDetails") as FormGroup;
   }
@@ -133,13 +120,13 @@ export class MultistepformComponent implements OnInit {
     return this.CustomerRegister.get("customerDocuments") as FormGroup;
   }
 
-  pancardurl: any;
+  panCardurl: any;
   adharcardurl: any;
   photourl: any;
   signatureurl: any;
   incomeStatementurl: any;
 
-  pancard: any;
+  panCard: any;
   adharcard: any;
   photo: any;
   signature: any;
@@ -163,11 +150,11 @@ export class MultistepformComponent implements OnInit {
   // }}
 
   onselectfile1(event) {
-    this.pancard = event.target.files[0]
+    this.panCard = event.target.files[0]
     var reader= new FileReader()        // this for preview the file 
     reader.readAsDataURL(event.target.files[0]);
     reader.onload=(event:any)=>{
-      this.pancardurl=event.target.result;
+      this.panCardurl=event.target.result;
   }}
   
   onselectfile2(event) {
@@ -241,7 +228,7 @@ export class MultistepformComponent implements OnInit {
 
     let allData = JSON.stringify(this.cs.customer); //customerid from Form to Json
 
-    data.append('pancard', this.pancard); //binds media file to data with form data
+    data.append('pancard', this.panCard); //binds media file to data with form data
     data.append('adharcard', this.adharcard);
     data.append('photo', this.photo);
     data.append('signature', this.signature);

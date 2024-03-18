@@ -11,6 +11,8 @@ import { UserModule } from './user/user.module';
 import { OprationalExecutiveModule } from './Role/oprational-executive/oprational-executive.module';
 import { RelationalExecutiveModule } from './Role/relational-executive/relational-executive.module';
 import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, TermsAndConditionComponent],
@@ -27,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     RelationalExecutiveModule,
     OprationalExecutiveModule,
     UserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

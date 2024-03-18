@@ -13,6 +13,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 
 
@@ -42,6 +43,9 @@ export const Userrouting: Routes = [
     
     
   ],
+  
+ 
+
   exports: [MultistepformComponent],
 })
 export class UserModule { }

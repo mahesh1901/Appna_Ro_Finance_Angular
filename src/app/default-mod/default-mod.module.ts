@@ -52,11 +52,12 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { HomeComComponent } from '../Navigationbar/home-com/home-com.component';
-import { LoanEnquiryComponent } from '../Navigationbar/loan-enquiry/loan-enquiry.component';
+
 import { AboutUsComponent } from '../Navigationbar/about-us/about-us.component';
 import { EmiCalculatorComponent } from '../Navigationbar/emi-calculator/emi-calculator.component';
 import { SinInComponent } from '../Navigationbar/sin-in/sin-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoanEnquiryComponent } from '../Navigationbar/loan-enquiry/loan-enquiry.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SinInComponent, // Ensure SinInComponent is declared here
     HomeComComponent, // Ensure HomeComComponent is declared here
     EmiCalculatorComponent, // Ensure EmiCalculatorComponent is declared here
-    LoanEnquiryComponent, // Ensure LoanEnquiryComponent is declared here
+     LoanEnquiryComponent,
     AboutUsComponent // Ensure AboutUsComponent is declared here
   ],
   imports: [
@@ -87,8 +88,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SinInComponent,
     HomeComComponent,
     EmiCalculatorComponent,
-    LoanEnquiryComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LoanEnquiryComponent
   ]
 })
 export class DefaultModModule { }
