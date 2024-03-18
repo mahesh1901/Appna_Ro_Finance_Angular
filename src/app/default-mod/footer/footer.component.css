@@ -2,22 +2,29 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
-  margin: 0;
-  padding: 0;
+ 
+  padding-bottom: 15px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 body {
   min-height: 80vh;
   width: 100%;
-  background: #eeeceb;
+  background: 3#eeeceb;
+ 
+  
+  
 }
 footer {
   
   background: #676f88;
   width: 100%;
-  bottom: 0;
-  left: 0;
+  /* bottom: 50px; */
+  /* left: 0;
+  padding-bottom: 170px; */
+  margin-bottom: 20px;
+  
+  
 }
 footer::before {
   content: "";
@@ -242,6 +249,4 @@ footer .bottom-details .bottom_text {
     width: 100%;
   }
 }
-h6{
-  margin-left: 40%;
-}
+

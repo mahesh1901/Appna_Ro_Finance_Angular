@@ -2,6 +2,8 @@ body {
 	margin: 0;
 	padding: 0;
     font-family: sans-serif;
+	height: 30%;
+	
 }
 
 a {text-decoration: none;}
@@ -9,7 +11,10 @@ a {text-decoration: none;}
 .container {
 	
 	width: 100%;
-	align-content: flex-end;
+
+	align-content: flex-start;
+	
+	
 }
 label.logo{
     font-size: 30px;
@@ -17,7 +22,7 @@ label.logo{
     color: rgb(252, 4, 4);
     padding:0 80px;
 	
-	// border-radius: 100px;
+	 /* border-radius: 100px; */
     line-height: 80px;
 }
 
@@ -27,12 +32,15 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
 	list-style: none;
+	width: 100%;
 }
 
 nav {
 	background: #080079;
 	font-size: 25px;
-	position: relative;
+	position: fixed;
+	width: 100%;
+	
 	
     
 }

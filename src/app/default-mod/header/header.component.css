@@ -21,9 +21,9 @@
   font-family: 'Poppins', sans-serif;
 } 
 
-.wrapper .top_nav
+/* .wrapper .top_nav
 {
-  /* background-image: url(https://www.onlinesbi.sbi/sbijava/images/banner33.jpg); */
+  background-image: url(https://www.onlinesbi.sbi/sbijava/images/banner33.jpg);
   background-image:  url(/assets/unnamed.png) ;
   margin-top: 0px;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@
   height: 30vh;
   justify-content: space-between; 
   align-items: center;
-}
+} */
 
 .wrapper .top_nav .left{
  
