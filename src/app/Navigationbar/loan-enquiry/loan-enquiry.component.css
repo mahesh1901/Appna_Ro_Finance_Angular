@@ -1,4 +1,5 @@
-mat-card {
+mat-card
+ {
     max-width: 400px;
     margin: 2em auto;
     text-align: center;
@@ -123,7 +124,7 @@ input {
 }
 
 .form-container {
-  position: absolute;
+  position: relative;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
