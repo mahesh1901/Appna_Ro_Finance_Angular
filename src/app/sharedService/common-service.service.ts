@@ -97,7 +97,7 @@ public customer:Coustomer={
 
   // Depend on cibil mail is send to Customer 
   sendMail(enquiryDetails: EnquiryDetails){
-    return this.http.post("http://localhost:9090//cibilstatus",enquiryDetails)
+    return this.http.post("http://mahesh:8084/mail/cibilstatus",enquiryDetails)
   }
 
 
@@ -107,19 +107,19 @@ public customer:Coustomer={
   //saving new application here
   saveCustomer(customer:any,enquiryId:string){
     alert("call to common service ")
-    return this.http.post("http://localhost:9090/GCappps/upload/"+enquiryId,customer)
+    return this.http.post("http://mahesh:8083/customer/upload/"+enquiryId,customer)
   }
 
   // single data for customer to track their application 
   getSingleCustomer(customerId:string){
-    return this.http.get("http://localhost:9090/GCappps/getcustomerbyid/"+customerId);
+    return this.http.get("http://mahesh:8083/customer/getcustomerbyid/"+customerId);
   }
 
    //-------------------------------------------------------- OE call ----------------------------------------------------
 
     // after Oe Verification satus updated     
     withstatusUpdate(customerId: string, status: string) {
-      return this.http.put("http://localhost:9090/GCappps/withstatus/"+customerId,status);
+      return this.http.put("http://mahesh:8083/customer/withstatus/"+customerId,status);
     }
 
   //-------------------------------------------------------- CM call ----------------------------------------------------
@@ -127,13 +127,13 @@ public customer:Coustomer={
     // save sanction with secondary by CM 
     generatesanctionletter(sanctionobj:SanctionLetter,customerId:string) {
       alert("sanction letter")
-      return this.http.post("http://localhost:9090/GCappps/generatesanctionletter/"+customerId,sanctionobj);
+      return this.http.post("http://mahesh:8084/generatesanctionletter/"+customerId,sanctionobj);
       }
   //----------------------------------------------- Common call for get customerlist----------------------------------------------------
   // all cuatomer Data depend on Status
   getCustomer(status:string){
     alert("Application list")
-    return this.http.get("http://localhost:9090/GCappps/getAllCustomer/"+status)
+    return this.http.get("http://mahesh:8083/customer/getAllCustomer/"+status)
   }
 
   //-------------------------------------------------------- AM call ----------------------------------------------------
@@ -142,14 +142,14 @@ public customer:Coustomer={
     loandisbursement(customerId:string) {
       alert("loandisbursement letter")
       
-      return this.http.get("http://localhost:9090/GCappps/loandisburse/"+customerId);
+      return this.http.get("http://mahesh:8085/loanDisbursment/loandisburse/"+customerId);
       
       }
 
     // loan disbursement
       ledgerGenration(customerId:string) {
         alert("ledgergenarte letter")
-        return this.http.get("http://localhost:9090/GCappps/generateledger/"+customerId);
+        return this.http.get("http://mahesh:8085/loan/generateledger/"+customerId);
         }
 }
 
