@@ -31,9 +31,11 @@
 .header{
   min-height: 70vh;
   width: 100%;
-  background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 26%, rgba(239,159,201,1) 89%, rgba(240,137,199,1) 93%, rgba(242,93,195,1) 98%);
+  /* background: rgb(238,174,202); */
+/* background: radial-gradient(circle, rgba(238,174,202,1) 26%, rgba(239,159,201,1) 89%, rgba(240,137,199,1) 93%, rgba(242,93,195,1) 98%); */
   /* background-image:  url(insurance_set_2.jpg);  */
+  background: rgb(45,55,253);
+  background: linear-gradient(0deg, rgba(45,55,253,1) 14%, rgba(34,193,195,1) 49%, rgba(34,193,195,1) 65%, rgba(39,125,223,1) 84%);
   background-position: center;
   background-size: cover;
   position: relative;

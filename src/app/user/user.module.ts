@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MultistepformComponent } from '../Role/relational-executive/multistepform/multistepform.component';
 import { ShowStatusComponent } from './show-status/show-status.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,12 +18,11 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 
 export const Userrouting: Routes = [
-  { path: 'applicationform', component: MultistepformComponent },
   { path: 'statusshowform', component: ShowStatusComponent }
 ];
 
 @NgModule({
-  declarations: [MultistepformComponent,ShowStatusComponent],
+  declarations: [ShowStatusComponent],
   imports: [
     RouterModule.forChild(Userrouting),
     CommonModule,
@@ -46,6 +44,6 @@ export const Userrouting: Routes = [
   
  
 
-  exports: [MultistepformComponent],
+
 })
 export class UserModule { }
