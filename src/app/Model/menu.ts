@@ -6,7 +6,8 @@ export class Menu {
               { key: "statusshowform", label: "Check My Application" }
           ],
           RExecutive: [
-              { key: "viewenquiries", label: "View Enquiery Details" }
+              { key: "viewenquiries", label: "View Enquiery Details" },
+              {key:"multi", label:"Apply for Loan"}
           ],
           OExecutive: [
               { key: "vieweApplication", label: "View Enquiery Details" },                

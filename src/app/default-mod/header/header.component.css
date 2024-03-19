@@ -29,9 +29,10 @@
   display: none;
 }
 .header{
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100%;
-  background-color: white;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 26%, rgba(239,159,201,1) 89%, rgba(240,137,199,1) 93%, rgba(242,93,195,1) 98%);
   /* background-image:  url(insurance_set_2.jpg);  */
   background-position: center;
   background-size: cover;

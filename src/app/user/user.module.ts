@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MultistepformComponent } from './multistepform/multistepform.component';
+import { MultistepformComponent } from '../Role/relational-executive/multistepform/multistepform.component';
 import { ShowStatusComponent } from './show-status/show-status.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
