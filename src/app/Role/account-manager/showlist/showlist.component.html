@@ -35,8 +35,7 @@
       <td>{{singlecustomer.sanctionLetter.loanAmountSanctioned}}</td>
       <td>{{singlecustomer.sanctionLetter.monthlyEmiAmount}}</td>
       <td>{{singlecustomer.sanctionLetter.loanTenure}}</td>
-      <td>{{singlecustomer.dealerData.accountNumber}}</td>
-      <td>{{singlecustomer.dealerData.accountIFSCCode}}</td>
+     
       <td *ngIf="singlecustomer.customerVerificationStatus === 'Customer_Accepted'"><button type="button" class="buttonclass3"   (click)="loandisbursement(singlecustomer.customerId)">Loan Disbursment</button>  
         <td *ngIf="singlecustomer.customerVerificationStatus === 'Loan_Disbursed'"><button type="button" class="buttonclass3"   (click)="ledgerGenration(singlecustomer.customerId)">Generate Ledger</button>    
           

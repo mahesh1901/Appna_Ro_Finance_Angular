@@ -1,22 +1,24 @@
 
 <form [formGroup]="CustomerRegister">
-    <mat-stepper [linear]="isLinear"   labelPosition="bottom">
-      <mat-step [stepControl]="customerbasicform">
+    <mat-stepper  labelPosition="bottom">
+      <!-- <mat-step [stepControl]="customerbasicform"> -->
+        <mat-step [stepControl]="customerbasicform">
+
   
         <div formGroupName="customerbasic">
           <ng-template matStepLabel>Fill Basic Details</ng-template>
           
           
-          <!-- <mat-form-field appearance="outline">     
+          <mat-form-field appearance="outline">     
             <mat-label>Enquiry Id</mat-label>     
             <input matInput formControlName="enquiryId" required />
-          </mat-form-field>  -->
+          </mat-form-field> 
 
           <!-- // Auto Generate  -->
-          <!-- <mat-form-field appearance="outline">     
+          <mat-form-field appearance="outline">     
             <mat-label>Customer Id</mat-label>     
             <input matInput formControlName="customerId" required />
-          </mat-form-field>  -->
+          </mat-form-field> 
        
           <mat-form-field appearance="outline">     
             <mat-label>First Name</mat-label>     
@@ -71,14 +73,18 @@
           </mat-form-field>
   
           <div>
-            <button  class="button-close" mat-raised-button color="primary" matStepperNext type="button">Next</button>
+            <!-- <button  class="button-close" mat-raised-button color="primary" matStepperNext type="button">Next</button> -->
+            <button mat-raised-button color="primary" matStepperNext>
+              Next
+            </button>
           </div>
   </div>
       </mat-step>
   
   
-  
-      <mat-step [stepControl]="customerAddressform" label="Fill out contact info"> 
+      <mat-step  [stepControl]="customerAddressform" label="Fill out contact info">
+
+      <!-- <mat-step [stepControl]="customerAddressform" >  -->
         <div formGroupName="customerAddress"> 
           <ng-template matStepLabel>Address Details</ng-template>
           <h2>Local Address</h2>

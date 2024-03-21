@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { MatStepper } from '@angular/material/stepper';
 
+
 @Component({
   selector: 'app-multistepform',
   templateUrl: './multistepform.component.html',
@@ -18,16 +19,10 @@ export class MultistepformComponent implements OnInit {
   customerbasic = false;
   customerAddress = false;
   customerFinancialData = false;
-  dealerData = false;
+  
   guarantorDetails = false;
   customerDocuments = false;
     step = 1;
-
-    
-
-
-
-
 
   ngOnInit(): void {}
 
@@ -43,6 +38,7 @@ export class MultistepformComponent implements OnInit {
       customerMobileNumber: this.fb.control(0, Validators.required),
       customerAdditionalMobileNumber: this.fb.control(0, Validators.required),
       customerEmail: this.fb.control('', Validators.required),
+      customerCibilScore:this.fb.control(''),
       customerVerificationStatus: this.fb.control(''),// field goes null
     }),
 
@@ -83,7 +79,7 @@ export class MultistepformComponent implements OnInit {
 
     
 
-    // form 5
+    // form 4
     guarantorDetails: this.fb.group({
       guarantorId:0,
       guarantorName: this.fb.control('', Validators.required),
@@ -92,7 +88,7 @@ export class MultistepformComponent implements OnInit {
       guarantorAdharcardNumber: this.fb.control(0, Validators.required),
       guarantorAddress: this.fb.control('', Validators.required),
     }),
-    // form 6
+    // form 5
     customerDocuments: this.fb.group({
       documentId: 0,
       panCard: this.fb.control('', Validators.required),
@@ -103,9 +99,11 @@ export class MultistepformComponent implements OnInit {
     }),
   });
 
+  
   get customerbasicform() {
     return this.CustomerRegister.get("customerbasic") as FormGroup;
   }
+  
   get customerAddressform() {
     return this.CustomerRegister.get("customerAddress") as FormGroup;
   }
@@ -133,10 +131,12 @@ export class MultistepformComponent implements OnInit {
   incomeStatement: any;
 
   goBack(stepper: MatStepper) {
+    this.step--;
     stepper.previous();
   }
-
+  
   goForward(stepper: MatStepper) {
+    this.step++;
     stepper.next();
   }
 
@@ -220,7 +220,6 @@ export class MultistepformComponent implements OnInit {
       'customerFinancialData'
     ).value;
 
-    this.cs.customer.dealerData = this.CustomerRegister.get('dealerData').value;
 
     this.cs.customer.guarantorDetails = this.CustomerRegister.get('guarantorDetails').value;
 

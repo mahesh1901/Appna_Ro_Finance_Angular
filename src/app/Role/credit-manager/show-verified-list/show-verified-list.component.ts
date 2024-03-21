@@ -20,6 +20,7 @@ export class ShowVerifiedListComponent {
 
 // all below method for list getting 
   verifiedApplication(){
+    alert("Customer Verified  Data")
     this.cs.getCustomer("Verified").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
@@ -27,20 +28,23 @@ export class ShowVerifiedListComponent {
   }
 
   customerAccepted(){
+    alert("customer Accepted Data");
     this.cs.getCustomer("Customer_Accepted").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
     this.showme=false;
   }
   customerRejected(){
-    this.cs.getCustomer("Customer_Rejected").subscribe((application:any)=>{
+    alert("Customer Rejected Data");
+   this.cs.getCustomer("Customer_Rejected").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
     this.showme=false;
   }
 
   sanctionGenerated(){
-    this.cs.getCustomer("Sanction_Genetrated").subscribe((application:any)=>{
+    alert("Sanction Generated Customer");
+    this.cs.getCustomer("Sanction_Generated").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
     this.showme=false;

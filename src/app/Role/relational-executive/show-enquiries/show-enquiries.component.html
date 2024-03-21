@@ -24,9 +24,9 @@
         <th scope="col">Enquiry Status</th>  
         <div *ngIf="showme" >
         <th  scope="col">Cibil Score</th>
-        <th scope="col">Date</th>
+        <!-- <th scope="col">Date</th>
         <th scope="col">Remark</th>
-        <th scope="col">Previous EMI</th>  
+        <th scope="col">Previous EMI</th>   -->
       </div>          
       </tr>
     </thead>
@@ -46,15 +46,18 @@
         <td>{{enquiry.monthlyIncome}}</td>
         <td>{{enquiry.enquiryStatus}}</td>  
         <div *ngIf="showme">
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.cibilScore}}</td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.cibilGeneratedDate}}</td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.remark}}</td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.previousEmi}}</td>        
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.cibilScore}}</td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.cibilGeneratedDate}}</td>
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilScore}}</td>
+        <!-- <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button routerLink="dashboardlayout/RExecutive/viewenquiries/apply">APPLY</button></td> -->
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">
+          <button routerLink="/dashboardlayout/RExecutive/apply">APPLY</button>
+        </td>
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilScore}}</td>
+        <!-- <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.cibilGeneratedDate}}</td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.remark}}</td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.previousEmi}}</td>       
-        <td>
+        <td> -->
+          <router-outlet></router-outlet>
+
         </div>     
         </tr>
     </tbody>

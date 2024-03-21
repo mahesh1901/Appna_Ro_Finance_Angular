@@ -49,7 +49,7 @@ export class SanctionGenerationComponent {
        monthlyEmiAmount: [0, [Validators.required]],
        loanAmountWithInterest: [0, [Validators.required]],
        modeOfPayment: ['', [Validators.required]],
-       //null
+      
        sanctionLetterStatus:['']
  
      });
@@ -125,7 +125,12 @@ export class SanctionGenerationComponent {
      }
    })
  
+  //  this.cs.withstatusUpdate(customerId,"Verified").subscribe(()=>{ });
+
    this.cs.sanctionobj=this.sanctionLetterForm.value
+  // this.cs.customer(this.customerdata.customerId);
+
+  console.log(this.customerdata.customerId);
    this.cs.generatesanctionletter(this.cs.sanctionobj,this.customerdata.customerId).subscribe(()=>{
  
    });

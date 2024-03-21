@@ -5,7 +5,7 @@ import { EnquiryDetails } from '../Model/enquiry-details';
 import { GuarantorDetails } from '../Model/guarantor-details';
 import { Documents } from '../Model/documents';
 import { Ledger } from '../Model/ledger';
-import { Dealer } from '../Model/dealer';
+
 import { HttpClient } from '@angular/common/http';
 import { CoustomerFinancialData } from '../Model/coustomer-financial-data';
 import { CoustomerAddress } from '../Model/coustomer-address';
@@ -64,7 +64,7 @@ public customer:Coustomer={
   customerVerificationStatus: '',
   customerAddress: new CoustomerAddress,
   customerFinancialData: new CoustomerFinancialData,
-  dealerData: new Dealer,
+  
   guarantorDetails: new GuarantorDetails,
   customerDocuments: new Documents,
   // this is passed null from frontend
@@ -124,15 +124,16 @@ public customer:Coustomer={
 
   //-------------------------------------------------------- CM call ----------------------------------------------------
 
-    // save sanction with secondary by CM 
+    // save sanction with secondary by CM  And Admin Service
     generatesanctionletter(sanctionobj:SanctionLetter,customerId:string) {
       alert("sanction letter")
-      return this.http.post("http://mahesh:8084/generatesanctionletter/"+customerId,sanctionobj);
+      return this.http.put("http://mahesh:8084/generatesanctionletter/"+customerId,sanctionobj);
       }
   //----------------------------------------------- Common call for get customerlist----------------------------------------------------
-  // all cuatomer Data depend on Status
-  getCustomer(status:string){
-    alert("Application list")
+  // all costomer Data depend on Status
+  getCustomer(status:string)
+  {
+    alert("Getting Applicants")
     return this.http.get("http://mahesh:8083/customer/getAllCustomer/"+status)
   }
 

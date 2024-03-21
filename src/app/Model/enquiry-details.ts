@@ -14,5 +14,5 @@ export class EnquiryDetails
     enquiryStatus:string;
     setCurrentDateAndTime:any;
     cibilScore:string;
-    //cibildata:Cibil;  
+     
 }

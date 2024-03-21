@@ -27,7 +27,7 @@ export class ShowEnquiriesComponent {
    }
   
    validcibilEnquiries(){  
-    this.cs.customerEnquiries("Cibilock").subscribe((response:any)=>{
+    this.cs.customerEnquiries("Cibilok").subscribe((response:any)=>{
       this.enquirylist=response.responceData;
       this.showme=true;
     })

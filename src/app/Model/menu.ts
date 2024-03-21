@@ -2,23 +2,24 @@ export class Menu {
     public static menus: Array<any> = [
       {
           User: [
-              { key: "applicationform", label: "Application form" },
               { key: "statusshowform", label: "Check My Application" }
           ],
           RExecutive: [
               { key: "viewenquiries", label: "View Enquiery Details" },
-              {key:"multi", label:"Apply for Loan"}
-          ],
+            ],
           OExecutive: [
-              { key: "vieweApplication", label: "View Enquiery Details" },                
+              { key: "ViewAllEnquires", label: "View All Application Applies" },  
+              // {key:'ShowSingleEnquiry', label:"View Single Application"}              
 
           ],
+
           Cmanager: [
               { key: "showVerifiedList", label: "Show Application" },
+            //   {key:"sanctionGeneration", label:"SanctionGeneration"}
           ],
           acManager: [
               {    key:'showSanctionist', label: "Show Sanction List"},
-              {    key:'showLedgerData',  label: "Show LedgerList"}               
+              {    key:'showLedgerData',  labe23l: "Show LedgerList"}               
           ] 
       }
   ]
