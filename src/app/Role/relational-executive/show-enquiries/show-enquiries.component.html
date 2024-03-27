@@ -22,16 +22,15 @@
         <th scope="col">Pancard Number</th>
         <th scope="col">Monthly Income</th>
         <th scope="col">Enquiry Status</th>  
-        <div *ngIf="showme" >
+        <!-- <div *ngIf="showme" > -->
         <th  scope="col">Cibil Score</th>
-        <!-- <th scope="col">Date</th>
-        <th scope="col">Remark</th>
-        <th scope="col">Previous EMI</th>   -->
-      </div>          
+        
+      <!-- </div>           -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let enquiry of enquirylist">
+      <ng-container *ngIf="enquirylist && enquirylist.length > 0; else noData">
+    <tr *ngFor="let enquiry of enquirylist">
         <td *ngIf="enquiry.enquiryStatus === 'Enquired'"><button type="button" class="buttonclass3"  (click)="cibilScoreCheck(enquiry)">CheckCibil</button></td>  
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button type="button" class="buttonclass3"  (click)="sendMail(enquiry)">SendMail</button></td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'"><button type="button" class="buttonclass3"  (click)="sendMail(enquiry)">SendMail</button></td>          
@@ -47,19 +46,21 @@
         <td>{{enquiry.enquiryStatus}}</td>  
         <div *ngIf="showme">
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilScore}}</td>
-        <!-- <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button routerLink="dashboardlayout/RExecutive/viewenquiries/apply">APPLY</button></td> -->
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">
           <button routerLink="/dashboardlayout/RExecutive/apply">APPLY</button>
         </td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilScore}}</td>
-        <!-- <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.cibilGeneratedDate}}</td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.remark}}</td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.previousEmi}}</td>       
-        <td> -->
+        
           <router-outlet></router-outlet>
 
         </div>     
         </tr>
+      </ng-container>
+      <ng-template #noData>
+          <tr>
+              <td colspan="12"><h3>No data available</h3></td>
+          </tr>
+      </ng-template>
     </tbody>
   </table>
   

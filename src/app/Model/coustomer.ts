@@ -11,8 +11,8 @@ import { SanctionLetter } from "./sanction-letter";
 export class Coustomer 
 {
 [x: string]: any;
-customerId:string;	
-enquiryId:string;
+customerId:number;	
+enquiryId:number;
 customerFirstName:string;
 customerMiddleName:string;
 customerLastName:string;
@@ -42,8 +42,8 @@ customerDocuments:Documents;
 loanDisbursement:LoanDisbursment;	
 	
 ledger:Ledger;		
-
-sanctionLetter:SanctionLetter;	
+sanctionLetter:SanctionLetter;
+// sanctionLetter:SanctionLetter
 
 
 

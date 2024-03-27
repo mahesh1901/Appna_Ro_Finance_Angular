@@ -1,6 +1,6 @@
 export class LoanDisbursment
 {
-loanId:string;
+loanId:number;
 totalAmount:number;
 bankAccountNumber:number;
 bankIFSCCode:string;

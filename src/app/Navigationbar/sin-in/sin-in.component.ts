@@ -82,8 +82,8 @@ export class SinInComponent implements OnInit{
      
      // Admin Login 
   else if (
-    this.loginfo.get('customerEmail').value === 'ac' &&
-    this.loginfo.get('customerPassword').value === 'ac123'
+    this.loginfo.get('customerEmail').value === 'admin' &&
+    this.loginfo.get('customerPassword').value === 'admin123'
   ) {
     alert('welcome Account Manager');
     localStorage.setItem('role', 'acManager');

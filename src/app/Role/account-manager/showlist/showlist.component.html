@@ -1,7 +1,7 @@
 
 <div>  
     <ul>      
-      <li><input type="button" class="buttonclass1" value="Customer Accepted List" (click)="customerAcceptedList()"></li>      
+      <li><input type="button" class="buttonclass1" value="Sanction_Generated List" (click)="customerAcceptedList()"></li>      
       <li><input type="button" class="buttonclass1" value="Loan Disbursment List" (click)="loanDisburseList()"></li>
       <li><input type="button" class="buttonclass1" value="Ledger Genrated List" (click)="ledgerGenratedList()"></li>
     </ul>
@@ -32,14 +32,31 @@
       <td>{{singlecustomer.customerLastName}}</td>
       <td>{{singlecustomer.customerMobileNumber}}</td>
       <td>{{singlecustomer.customerEmail}}</td>
-      <td>{{singlecustomer.sanctionLetter.loanAmountSanctioned}}</td>
-      <td>{{singlecustomer.sanctionLetter.monthlyEmiAmount}}</td>
-      <td>{{singlecustomer.sanctionLetter.loanTenure}}</td>
+      <td>{{ singlecustomer.sanctionLetter?.loanAmountSanctioned }}</td>
+<td>{{ singlecustomer.sanctionLetter?.monthlyEmiAmount }}</td>
+<td>{{ singlecustomer.sanctionLetter?.loanTenure }}</td>
+<td>{{ singlecustomer.customerFinancialData?.customerAccountNumber }}</td>
+<td>{{ singlecustomer.customerFinancialData?.ifscCode }}</td>
+
      
-      <td *ngIf="singlecustomer.customerVerificationStatus === 'Customer_Accepted'"><button type="button" class="buttonclass3"   (click)="loandisbursement(singlecustomer.customerId)">Loan Disbursment</button>  
+      <!-- <td>{{singlecustomer.sanctionLetter.loanAmountSanctioned}}</td>
+      <td>{{singlecustomer.sanctionLetter.monthlyEmiAmount}}</td>
+
+      <td>{{singlecustomer.sanctionLetter.loanTenure}}</td>
+      <td>{{singlecustomer.customerFinancialData.customerAccountNumber}}</td>
+      <td>{{singlecustomer.customerFinancialData.ifscCode}}</td> -->
+     
+      <!-- <td *ngIf="singlecustomer.customerVerificationStatus === 'Customer_Accepted'"><button type="button" class="buttonclass3"   (click)="loandisbursement(singlecustomer.customerId)">Loan Disbursment</button>  
         <td *ngIf="singlecustomer.customerVerificationStatus === 'Loan_Disbursed'"><button type="button" class="buttonclass3"   (click)="ledgerGenration(singlecustomer.customerId)">Generate Ledger</button>    
-          
+           
+      </td>-->
+      <td *ngIf="singlecustomer.customerVerificationStatus === 'Sanction_Generated'">
+        <button type="button" class="buttonclass3" (click)="loandisbursement(singlecustomer.customerId)">Loan Disbursement</button>
       </td>
+      <td *ngIf="singlecustomer.customerVerificationStatus === 'Loan_Disbursed'">
+        <button type="button" class="buttonclass3" (click)="ledgerGenration(singlecustomer.customerId)">Generate Ledger</button>    
+      </td>
+      
      </tr>
   </tbody> 
   </table>

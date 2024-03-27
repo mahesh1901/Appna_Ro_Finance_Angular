@@ -2,6 +2,8 @@
 body {
     background: none;
     box-sizing: border-box;
+    background: rgb(238,174,202); 
+         background: radial-gradient(circle, rgb(208, 201, 185) 26%, rgb(205, 227, 223) 89%, rgb(205, 212, 181) 93%, rgb(151, 162, 217) 98%); 
 }
 
 #features {
@@ -17,6 +19,9 @@ body {
     background:#FFFFFF;
     text-align:center;
     padding:20px;
+
+    background: rgb(238,174,202); 
+         background: radial-gradient(circle, rgb(208, 201, 185) 26%, rgb(205, 227, 223) 89%, rgb(205, 212, 181) 93%, rgb(151, 162, 217) 98%); 
 
     
    
@@ -78,6 +83,9 @@ h1{
     margin-top: 25px;
     margin-bottom: 25px;
     border: none;
+width: 100%;
+    background: rgb(238,174,202); 
+         background: radial-gradient(circle, rgb(208, 201, 185) 26%, rgb(205, 227, 223) 89%, rgb(205, 212, 181) 93%, rgb(151, 162, 217) 98%); 
     
 
 }
@@ -109,6 +117,9 @@ h1{
     padding-top: 4rem;
     height: fit-content;
     margin-left: 11%;
+
+    background: rgb(238,174,202); 
+         background: radial-gradient(circle, rgb(208, 201, 185) 26%, rgb(205, 227, 223) 89%, rgb(205, 212, 181) 93%, rgb(151, 162, 217) 98%); 
     
 }
 
@@ -187,6 +198,7 @@ h1{
     max-width: 1300px;
     width: 90%;
     margin: 0% auto;
+
 }
 
 *{

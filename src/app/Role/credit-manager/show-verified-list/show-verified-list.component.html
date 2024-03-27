@@ -2,13 +2,13 @@
 
 <div>  
     <ul>
-      <li><input type="button" class="buttonclass1" value=" For Sanction Generation" (click)="verifiedApplication()"></li>
-      <li><input type="button" class="buttonclass1" value="Customer Accepted List" (click)="customerAccepted()"></li>
-      <li><input type="button" class="buttonclass1" value="Customer Rejected List" (click)="customerRejected()"></li>
-      <li><input type="button" class="buttonclass1" value="Sanction Generated List" (click)="sanctionGenerated()"></li>
-      <li><input type="button" class="buttonclass1" value="LoanDisbursed List" (click)="LoanDisbursed()"></li>
-    </ul>
+    <li><input type="button" class="buttonclass1" value="For Sanction Generation" (click)="verifiedApplication()"></li>
+<!-- <li><input type="button" class="buttonclass1" value="Customer Accepted List" (click)="customerAccepted()"></li>
+<li><input type="button" class="buttonclass1" value="Customer Rejected List" (click)="customerRejected()"></li> -->
+<li><input type="button" class="buttonclass1" value="Sanction Generated List" (click)="sanctionGenerated()"></li>
+<!-- <li><input type="button" class="buttonclass1" value="LoanDisbursed List" (click)="LoanDisbursed()"></li> -->
 
+</ul>
 
 <table class="table" >
   <thead class="heading">
@@ -36,7 +36,9 @@
       <td>{{singlecustomer.customerMobileNumber}}</td>
       <td>{{singlecustomer.customerEmail}}</td>
       <!-- <td>{{singlecustomer.customerCibilScore.cibilScore}}</td> -->
-      <td>{{singlecustomer.customerVerificationStatus}}</td>      
+      <td>{{singlecustomer.customerVerificationStatus}}</td>
+      <!-- <td>{{singlecustomer.sanctionLetter.sanctionLetterStatus}}</td>  -->
+
       <td  *ngIf="showme" ><button type="button" class="buttonclass3"
           (click)="generateSanction(singlecustomer)">Genrate Sanction</button></td>
      </tr>

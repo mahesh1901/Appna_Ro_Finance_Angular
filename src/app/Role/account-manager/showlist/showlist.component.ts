@@ -18,7 +18,7 @@ export class ShowlistComponent {
   
   
     customerAcceptedList(){
-      this.cs.getCustomer("Customer_Accepted").subscribe((application:any)=>{
+      this.cs.getCustomer("Sanction_Generated").subscribe((application:any)=>{
         this.customerdatalist=application.responceData
       });
     }     
@@ -29,7 +29,7 @@ export class ShowlistComponent {
           });
         }
         ledgerGenratedList(){
-          this.cs.getCustomer("Ledger_Generated").subscribe((application:any)=>{
+          this.cs.getCustomer("Loan_Disbursed").subscribe((application:any)=>{
             this.customerdatalist=application.responceData
           });
         }
@@ -40,13 +40,19 @@ export class ShowlistComponent {
           });
         }
   
-        loandisbursement(customerId:string){
+        loandisbursement(customerId:number){
+          console.log(customerId)
               this.cs.loandisbursement(customerId).subscribe((response:any)=>{
+                this.customerdatalist=response.responceData
+                console.log(this.customerdatalist)
           });
         }
+
   
-        ledgerGenration(customerId:string){
+        ledgerGenration(customerId:number){
           this.cs.ledgerGenration(customerId).subscribe((response:any)=>{
+            this.customerdatalist=response.responceData
+                console.log(this.customerdatalist)
       });
       }
 }

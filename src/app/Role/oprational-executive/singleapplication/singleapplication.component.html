@@ -15,7 +15,7 @@
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
                         <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg"
+                          <input type="number" id="form3Examplev2" class="form-control form-control-lg"
                             value="{{ customerdetails.enquiryId }}" aria-label="readonly input example" readonly />
                           <label class="form-label" for="form3Examplev2">Enquiry Id</label>
                         </div>
@@ -206,29 +206,20 @@
   <!-- ------------------------------------------->
   
                     <h3 class="fw-normal mb-5" style="color: #4835d4;">Documents Submitted</h3>
-  
-                    
-  
-  
-  
                     <div class="row">
                       <div class="col-md-1">
-                        <label class="form-label" for="form3Examplev3">1.Pancard</label>
+                        <label class="form-label" for="form3Examplev1">1.Pancard</label>
                         <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.pancard" height="200">
                         
                         </div>
                       </div>
-  
                       <div class="row">
                       <div class="col-md-1">
-                        <label class="form-label" for="form3Examplev3">2.AadharCard</label>
+                        <label class="form-label" for="form3Examplev2">2.AadharCard</label>
                         <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.adharcard" height="200">
                         
                       </div>
                     </div>
-  
-              
-  
                     <div class="row">
                       <div class="col-md-1">
                         <label class="form-label" for="form3Examplev3">5.IncomeStatemnt</label>
@@ -237,12 +228,6 @@
                         
                       </div>
                   </div>
-  
-  
-  
-  
-  
-  
                         <!-- ----------------------------------------PART 2---------------------------------------------------------------------------------- -->
                         <!--------------------------------------------------------------------------------------------------------------------------------->
                         <div class="row">
@@ -416,13 +401,7 @@
                                   (click)="applicationReject(customerdetails.customerId)">
                                 </div>
                               </div>
-                              
   
-  
-  
-  
-                              
-                            
                           <!---------------------------------------------------------------------Application Status------------------------------------------>
                           <!---------------------------------------------------------------------------------------------------------------->
                         </div>
@@ -474,84 +453,3 @@
           
         
   </section>
-  
-  <!--  
-   Data: {{customerdetails.customerLastName}}
-  
-  
-  {{customerdetails.enquiryId}}
-  {{customerdetails.customerFirstName}}
-  {{customerdetails.customerCibilScore.cibilScore}}
-  {{customerdetails.customerMiddleName}}
-  {{customerdetails.customerLastName}}
-  {{customerdetails.customerMobileNumber}}
-  {{customerdetails.customerAdditionalMobileNumber}}
-  {{customerdetails.customerEmail}}
-  
-  
-  {{customerdetails.customerFirstName}}
-  {{customerdetails.customerCibilScore.cibilScore}}
-  {{customerdetails.customerMiddleName}}
-  {{customerdetails.customerLastName}}
-  {{customerdetails.customerMobileNumber}}
-  {{customerdetails.customerAdditionalMobileNumber}}
-  {{customerdetails.customerEmail}}
-  
-  <h1>Local Address Information</h1>
-  {{customerdetails.customerAddress.localHouseNumber}}
-  {{customerdetails.customerAddress.localAreaName}}
-  {{customerdetails.customerAddress.localStreetName}}
-  {{customerdetails.customerAddress.localCityName}}
-  {{customerdetails.customerAddress.localDistrict}}
-  {{customerdetails.customerAddress.localPincode}}
-  {{customerdetails.customerAddress.localState}}
-  
-  <h1>Permamnt Address Information</h1>
-  {{customerdetails.customerAddress.permanentHouseNumber}}
-  {{customerdetails.customerAddress.permanentAreaName}}
-  {{customerdetails.customerAddress.permanentStreetName}}
-  {{customerdetails.customerAddress.permanentCityName}}
-  {{customerdetails.customerAddress.permanentDistrict}}
-  {{customerdetails.customerAddress.permanentPincode}}
-  {{customerdetails.customerAddress.permanentState}}
-  
-  <h1>FinanceData Data</h1>
-  {{customerdetails.customerFinancialData.customerTotalLoanRequired}}
-  {{customerdetails.customerFinancialData.customerAccountNumber}}
-  {{customerdetails.customerFinancialData.bankName}}
-  {{customerdetails.customerFinancialData.accountHolderName}}
-  {{customerdetails.customerFinancialData.ifscCode}}
-  {{customerdetails.customerFinancialData.ocupationType}}
-  {{customerdetails.customerFinancialData.designation}}
-  {{customerdetails.customerFinancialData.monthlyIncome}}
-  {{customerdetails.customerFinancialData.employerName}}
-  
-  
- 
-  
-  <h1>Guarantor Data</h1>
-  {{customerdetails.guarantorDetails.guarantorName}}
-  {{customerdetails.guarantorDetails.guarantorRelation}}
-  {{customerdetails.guarantorDetails.guarantorMobileNumber}}
-  {{customerdetails.guarantorDetails.guarantorAdharcardNumber}}
-  {{customerdetails.guarantorDetails.guarantorAddress}}
-  
-  
-  <h1>Document</h1>
-  <h3>pancard</h3>
-  
-  
-  
-  
-  
-  {{customerdetails.customerCibilScore}}
-  
-  
-  
-  
-  
-  
-  
-  
-         <td><button type="button" class="fa fa-download" style="font-size:25px;color:red"
-            (click)="makepdf(item.photo)">Download photo</button></td> -->

@@ -1,6 +1,6 @@
 export class SanctionLetter 
 {
-    sanctionId:string;
+    sanctionId:number;
 	sanctionDate:any;
 	applicantName:string;
 	loanAmountSanctioned:number;

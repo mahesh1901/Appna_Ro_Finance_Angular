@@ -2,7 +2,7 @@
 
 export class EnquiryDetails 
 {
-    enquiryId: string;
+    enquiryId: number;
     customerFirstName:string;
     customerMiddleName:string;
     customerLastName:string;

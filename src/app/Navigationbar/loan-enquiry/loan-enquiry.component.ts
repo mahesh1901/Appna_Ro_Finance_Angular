@@ -117,6 +117,7 @@ export class LoanEnquiryComponent implements OnInit {
         showConfirmButton: true,
         timer: 1500
       });
+      this.reloadPage();
     });
   }
 
@@ -150,5 +151,8 @@ export class LoanEnquiryComponent implements OnInit {
 
   get monthlyIncome() {
     return this.enquiryForm.get('monthlyIncome');
+  }
+  reloadPage() {
+    window.location.reload();
   }
 }

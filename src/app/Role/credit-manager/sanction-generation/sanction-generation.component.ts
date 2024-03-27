@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Coustomer } from '../../../Model/coustomer';
 import { CommonServiceService } from '../../../sharedService/common-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sanction-generation',
@@ -12,7 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SanctionGenerationComponent {
 
-  constructor(public cs: CommonServiceService, public fb: FormBuilder, private activatedroute: ActivatedRoute) { }
+
+  constructor(public cs: CommonServiceService, public fb: FormBuilder, private activatedroute: ActivatedRoute, private router:Router) { }
 
   public sanctionLetterForm: FormGroup;
      customerInfo: FormGroup;
@@ -39,7 +40,7 @@ export class SanctionGenerationComponent {
      })    
  
      this.sanctionLetterForm = this.fb.group({
-       sanctionId:'',
+       sanctionId:0,
        sanctionDate:'',     
        applicantName: [this.customerdata.customerFirstName, [Validators.required]],
        loanAmountSanctioned: [0, [Validators.required]],
@@ -51,6 +52,8 @@ export class SanctionGenerationComponent {
        modeOfPayment: ['', [Validators.required]],
       
        sanctionLetterStatus:['']
+
+
  
      });
  
@@ -124,6 +127,12 @@ export class SanctionGenerationComponent {
        )
      }
    })
+   alert(this.cs.customer.customerId+ " First");
+   alert(this.customerdata.customerId+ " Second")
+
+  //  this.cs.withstatusUpdate(this.customerdata.customerId,"Customer_Accepted").subscribe(()=>{ });
+
+   //this.cs.withstatusUpdate()
  
   //  this.cs.withstatusUpdate(customerId,"Verified").subscribe(()=>{ });
 
@@ -132,7 +141,18 @@ export class SanctionGenerationComponent {
 
   console.log(this.customerdata.customerId);
    this.cs.generatesanctionletter(this.cs.sanctionobj,this.customerdata.customerId).subscribe(()=>{
- 
+    this.cs.withstatusUpdate(this.customerdata.customerId,"Sanction_Generated").subscribe(()=>{ });
+
+
+   
    });
+
+  //  window.location.reload();
+  this.router.navigate(['./dashboardlayout/Cmanager/showVerifiedList']);
+
  }
+ backToCMOperation() {
+
+  this.router.navigate(['./dashboardlayout/Cmanager/showVerifiedList']);
+}
 }

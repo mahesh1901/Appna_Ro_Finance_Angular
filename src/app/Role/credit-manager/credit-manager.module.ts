@@ -21,6 +21,7 @@ export const cmrouting: Routes = [
   declarations: [
     SanctionGenerationComponent,
     ShowVerifiedListComponent
+   
   ],
   imports: [
     RouterModule.forChild(cmrouting),

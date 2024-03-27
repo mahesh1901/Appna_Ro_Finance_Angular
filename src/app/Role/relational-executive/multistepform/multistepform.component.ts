@@ -3,6 +3,7 @@ import { CommonServiceService } from '../../../sharedService/common-service.serv
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { MatStepper } from '@angular/material/stepper';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { MatStepper } from '@angular/material/stepper';
 })
 export class MultistepformComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private cs: CommonServiceService) {}
+  constructor(private fb: FormBuilder, private cs: CommonServiceService , private router:Router) {}
 
   public isLinear = true;
 
@@ -28,8 +29,8 @@ export class MultistepformComponent implements OnInit {
 
   CustomerRegister = this.fb.group({
     customerbasic: this.fb.group({
-      customerId:'', // field goes null
-      enquiryId: this.fb.control('', Validators.required),
+      customerId:0, // field goes null
+      enquiryId: this.fb.control(0, Validators.required),
       customerFirstName: this.fb.control('', Validators.required),
       customerMiddleName: this.fb.control('', Validators.required),
       customerLastName: this.fb.control('', Validators.required),
@@ -249,6 +250,10 @@ export class MultistepformComponent implements OnInit {
       imageAlt: 'Custom image',
     })
 
+  }
+  backToCMOperation() {
+
+    this.router.navigate(['./dashboardlayout/RExecutive/viewenquiries']);
   }
 }
 

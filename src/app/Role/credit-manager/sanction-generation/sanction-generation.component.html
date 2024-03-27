@@ -24,15 +24,7 @@
             </div>
         </div>
 
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <label>Cibil Score :</label>
-                <input type="text" class="form-control form-control-lg"
-                    value="{{customerdata.customerCibilScore.cibilScore}}" aria-label="readonly input example"
-                    readonly />
-            </div> -->
-
-          
+      
         </div>
 
         <div class="row">
@@ -169,6 +161,9 @@
 
                 <button class="button-save" mat-raised-button color="primary">Save Sanction Letter</button>
 
+                <div>
+                <button class="button-back" (click)="backToCMOperation()">Back to CM Operation</button>
+                </div>
             </mat-card-content>
         </form>
     </div>

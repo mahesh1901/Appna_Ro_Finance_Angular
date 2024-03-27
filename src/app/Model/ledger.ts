@@ -2,7 +2,7 @@ import { Installment } from "./installment";
 
 export class Ledger 
 {
-ledgerId:string;
+ledgerId:number;
 ledgerCreatedDate:string;
 totalLoanAmount:number;
 tenure:number;

@@ -14,7 +14,7 @@
             <input matInput formControlName="enquiryId" required />
           </mat-form-field> 
 
-          <!-- // Auto Generate  -->
+          // Auto Generate  
           <mat-form-field appearance="outline">     
             <mat-label>Customer Id</mat-label>     
             <input matInput formControlName="customerId" required />
@@ -49,8 +49,10 @@
             <mat-label>Gender:</mat-label>          
     <!-- <input matInput formControlName="customerGender" required />  -->
         <mat-radio-group formControlName="customerGender">
-            <mat-radio-button value="female" >Female</mat-radio-button>
-            <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female" >Female</mat-radio-button>
+          <!-- <mat-radio-button value="Other">Other</mat-radio-button> -->
+
           </mat-radio-group>
      
   
@@ -407,6 +409,9 @@
           |
           <input (click)="saveCustomer()"type="submit" name="submit" class="submit action-button" value="Submit"/>
         </div>
+        <div>
+          <button class="button-back" (click)="backToCMOperation()">Back to Relational Excecutive Operation</button>
+          </div>
       </mat-step>
     </mat-stepper>
   </form>

@@ -20,6 +20,7 @@ export class ShowEnquiriesComponent {
   
   
    pendingEnquiries(){  
+    alert("Showing Pending Enquires")
     this.cs.customerEnquiries("Enquired").subscribe((response:any)=>{
       this.enquirylist=response.responceData;
     })
@@ -27,6 +28,7 @@ export class ShowEnquiriesComponent {
    }
   
    validcibilEnquiries(){  
+    alert("Showing Valid Cibil Enquries")
     this.cs.customerEnquiries("Cibilok").subscribe((response:any)=>{
       this.enquirylist=response.responceData;
       this.showme=true;
@@ -34,6 +36,7 @@ export class ShowEnquiriesComponent {
    }
   
    rejectcibilEnquiries(){
+    alert("Showing Rejected Enquires")
     this.cs.customerEnquiries("Cibilreject").subscribe((response:any)=>{
       this.enquirylist=response.responceData;
       this.showme=true;
@@ -42,6 +45,8 @@ export class ShowEnquiriesComponent {
   
     
    cibilScoreCheck(enquiryDetails: EnquiryDetails){
+    alert("Cibil Checked  Successfully to : " + enquiryDetails.customerFirstName);
+
   this.cs.cibilScoreCheck(enquiryDetails).subscribe((response:any)=>{
     this.enquiry=response.responceData
     Swal.fire({
@@ -51,12 +56,14 @@ export class ShowEnquiriesComponent {
       showConfirmButton: true,
       timer: 5000,
     })
+    // alert("Cheked The Cibil Score "+ this.enquiry.cibilScore);
   });
   
   //window.location.reload();
    }
   
    sendMail(enquiryDetails: EnquiryDetails){
+    alert("Mail Sent Successfully to : " + enquiryDetails.customerFirstName);
     this.cs.sendMail(enquiryDetails).subscribe((response:any)=>{
       Swal.fire({
         position: 'center',

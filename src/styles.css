@@ -2,5 +2,10 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+   
+        background: rgb(238,174,202); 
+         background: radial-gradient(circle, rgb(208, 201, 185) 26%, rgb(205, 227, 223) 89%, rgb(205, 212, 181) 93%, rgb(151, 162, 217) 98%); 
+        
+}
 

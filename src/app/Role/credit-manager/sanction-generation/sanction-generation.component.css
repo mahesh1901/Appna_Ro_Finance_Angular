@@ -1,26 +1,10 @@
-mat-card {
-    max-width: 900px;
+/* 
  
-    margin: 2em auto;
-    text-align: center;
-  }
-  mat-form-field {
-    display: block;
-    }
- .example-full-width{
-    width: 100%;
- }
- .mat-form-field {
-  width: 200px;
-  /* example */
-  font-size: 12px; 
-}
 .button-close {
   justify-self: right;
   font-size: 15px;
   border: none;
   height: 40px;
-   /* background-color: #FFFFFF; */
   outline: none;
   color: #ffffff;
   margin-top: 10px;
@@ -33,7 +17,6 @@ mat-card {
   font-size: 15px;
   border: none;
   height: 40px;
-   /* background-color: #FFFFFF; */
   outline: none;
   color: #ffffff;
 }
@@ -52,14 +35,12 @@ mat-card {
  .mat-form-field {
   width: 200px;
   font-size: 12px; 
-  /* example */
 }
 .button-close {
   justify-self: center;
   font-size: 15px;
   border: none;
   height: 40px;
-   /* background-color: #FFFFFF; */
   outline: none;
   color: #ffffff;
   margin-top: 10px;
@@ -72,7 +53,6 @@ mat-card {
   font-size: 15px;
   border: none;
   height: 40px;
-/* background-color: #FFFFFF; */
   outline: none;
   color: #ffffff;
 
@@ -90,4 +70,114 @@ mat-card {
 mat-divider{
   color: black;
   size: 5px;
+} */ 
+
+/* Container */
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Form Fields */
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.button-save {
+  margin-top: 20px;
+}
+
+/* Divider */
+mat-divider {
+  margin: 20px 0;
+}
+
+/* Responsive Columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.3333% - 20px);
+  max-width: calc(33.3333% - 20px);
+  padding: 0 10px;
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Mat Input */
+.mat-input-element {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Mat Card Content */
+mat-card-content {
+  padding: 0;
+}
+
+/* Mat Raised Button */
+mat-raised-button {
+  min-width: 150px;
+}
+
+/* Mat Divider */
+mat-divider {
+  margin: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+/* Adjustments for small devices */
+@media (max-width: 768px) {
+  .col-md-4 {
+      flex: 0 0 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+  }
+}
+.button-back {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  margin-top: 20px; /* Adjust spacing from the content above */
+}
+
+.button-back:hover {
+  background-color: #d32f2f; /* Darker Red */
 }

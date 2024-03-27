@@ -19,7 +19,7 @@ export class Menu {
           ],
           acManager: [
               {    key:'showSanctionist', label: "Show Sanction List"},
-              {    key:'showLedgerData',  labe23l: "Show LedgerList"}               
+               {    key:'showLedgerData',  labe23l: "Show LedgerList"}               
           ] 
       }
   ]
